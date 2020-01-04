@@ -52,7 +52,7 @@ $color-white: #fff;
         width: 100%;
         border-bottom: 1px solid #a1a1a1;
         opacity: .5;
-        @media (max-width: 990px) {
+        @media (max-width: 989px) {
             display: none;
         }
     }
@@ -78,7 +78,7 @@ $color-white: #fff;
         justify-content: flex-end;
     }
 }
-@media (max-width: 990px) {
+@media (max-width: 989px) {
     .header-navigation {
         display: flex;
         justify-content: center;
@@ -141,5 +141,98 @@ $color-white: #fff;
 // == / Header ============================================
 
 // == Works ============================================
+.section-works {
+    padding-top: 110px;
+    padding-bottom: 110px;
 
+    &__header {
+        &__title {
+            @include font-montserrat;
+            font-size: 36px;
+            line-height: 53px;
+            text-align: center;
+            font-weight: 700;
+            color: #323232;
+            margin-bottom: 40px;
+        }
+        &__text {
+            @include font-montserrat;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            color: #999;
+            margin-bottom: 70px;
+        }
+    }
+    &__list {
+        display: flex;
+        &__item {
+            display: flex;
+            justify-content: space-between;
+            &__description {
+                &__title {
+                    @include font-montserrat;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    color: #000;
+                    margin-bottom: 12px;
+                }
+                &__text {
+                    @include font-montserrat;
+                    font-size: 14px;
+                    line-height: 22px;
+                    color: #999;
+
+                }
+            }
+        }
+    }
+    &__form {
+        text-align: center;
+        margin-top: 95px;
+    }
+}
+@media (min-width: 990px) {
+    .section-works {
+        &__header {
+            width: 70%;
+            margin: 0 auto;
+        }
+        &__list {
+            &__item {
+                &__description {
+                    transform: translateY(50%);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 989px) {
+    .section-works {
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            &__item {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .section-works {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        &__header {
+            &__text {
+                margin-bottom: 30px;
+            }
+        }
+        &__form {
+            margin-top: 40px;
+        }
+    }
+}
 // == / Works ============================================
