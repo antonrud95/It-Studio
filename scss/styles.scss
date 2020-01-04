@@ -1,0 +1,145 @@
+@import 'normalize.scss';
+
+// == Mixins =============================================
+@mixin font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+@mixin start-button {
+    @include font-montserrat;
+    font-size: 16px;
+    margin: 0;
+    padding: 18px 50px;
+    outline: none;
+    border-radius: 30px;
+    background-color: #4985FF;
+    box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+// ===  / Mixins =========================================
+
+// === Variables ===
+$color-white: #fff;
+// === / Variables ===
+
+// === Common ===
+* {
+    box-sizing: border-box;
+}
+.section-outer{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.btn-main {
+    @include start-button;
+    border: none;
+    color: $color-white;
+}
+// === / Common ===
+
+// === Navigation =======================================
+.header-navigation {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid #a1a1a1;
+        opacity: .5;
+        @media (max-width: 990px) {
+            display: none;
+        }
+    }
+}
+.header-nav {
+    padding: 25px 0 25px 0;
+}
+.header-navigation__link {
+    color: $color-white !important;
+}
+@media (min-width: 990px) {
+    .header-navigation__item {
+        &:hover {
+            border-bottom: 1px solid $color-white;
+            padding-bottom: 25px;
+        }
+    }
+    .header-navigation__item + .header-navigation__item {
+        margin-left: 30px;
+    }
+    .header-navigation {
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+@media (max-width: 990px) {
+    .header-navigation {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .navbar {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+// === / Navigation =======================================
+
+// == Header ============================================
+.header {
+    position: relative;
+    color: $color-white;
+    background: url(..//img/header/Rectangle.png) center no-repeat;
+    background-size: cover;
+    .section-inner {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    &-content {
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+    }
+    &-wrapper {
+        margin: 0 auto;
+        text-align: center;
+        &__description {
+            @include font-montserrat;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+            @media (max-width: 545px) {
+                font-size: 10px;
+                line-height: 13px;
+            }
+        }
+        &__title {
+            @include font-montserrat;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 64px;
+            width: 60%;
+            margin: 0 auto 40px auto;
+            @media (max-width: 768px) {
+                @include font-montserrat;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 40px;
+                width: 100%;
+                margin: 0 auto 20px auto;
+            }
+        }
+    }
+}
+// == / Header ============================================
+
+// == Works ============================================
+
+// == / Works ============================================
