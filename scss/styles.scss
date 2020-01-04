@@ -236,3 +236,111 @@ $color-white: #fff;
     }
 }
 // == / Works ============================================
+
+// == Company ============================================
+.section-company {
+    background-color: #f6f6f8;
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.section-company-1 {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    &__info {
+        padding-top: 60px;
+        &__title {
+            @include font-montserrat;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 53px;
+            color: #323232;
+            margin-bottom: 30px;
+        }
+        &__text {
+            @include font-montserrat;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+    }
+    img {
+        padding-bottom: 85px;
+    }
+}
+.section-company-2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 65px;
+    &__item {
+        &__block {
+            display: flex;
+            align-items: center;
+            &__image {
+                padding-right: 15px;
+            }
+            &__title {
+                @include font-montserrat;
+                font-size: 36px;
+                line-height: 53px;
+                color: #000;
+                margin-bottom: 0;
+            }
+            &__description {
+                @include font-montserrat;
+                font-size: 16px;
+                line-height: 25px;
+                color: #999;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+@media (min-width: 990px) {
+    .section-company-1 {
+        justify-content: space-between;
+        &__info {
+            width: 40%;
+        }
+    }
+}
+@media (max-width: 989px) {
+    .section-company-1 {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        &__image {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .section-company {
+        padding-top: 30px;
+        padding-bottom: 35px;
+    }
+    .section-company-1 {
+        img {
+            padding-bottom: 30px;
+        }
+    }
+    .section-company-1__info {
+        padding-top: 20px;
+    }
+    .section-company-2 {
+        padding-top: 30px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        &__item {
+            padding-bottom: 30px;
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+// == / Company ============================================
