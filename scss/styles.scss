@@ -270,7 +270,7 @@ $color-white: #fff;
 }
 .section-company-2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-top: 65px;
     &__item {
         &__block {
@@ -344,3 +344,147 @@ $color-white: #fff;
     }
 }
 // == / Company ============================================
+
+// == Services ============================================
+.container-fluid {
+    background: linear-gradient(to right, #504dc2, #5f12d0);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.section-services {
+    &__upper {
+        height: 490px;
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 100px;
+            &__title {
+                @include font-montserrat;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 53px;
+                color: #fff;
+            }
+        }
+    }
+    &__lower {
+        height: 485px;
+        &__item {
+            &__title {
+                @include font-montserrat;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+                color: #000;
+                margin-top: 30px;
+                span {
+                    @include font-montserrat;
+                    color: #4985ff;
+                }
+            }
+            &__description {
+                @include font-montserrat;
+                font-size: 16px;
+                line-height: 25px;
+                color: #999;
+                margin-top: 30px;
+            }
+        }
+    }
+}
+@media (min-width: 1139px) {
+    .section-services {
+        &__upper {
+            &__info {
+                &__title {
+                    width: 60%;
+                }
+            }
+        }
+        &__lower {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -170px;
+                width: 100%;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            display: flex;
+            justify-content: space-between;
+            height: 482px;
+            transform: translateY(-50%);
+            &__item {
+                max-width: 350px;
+                &__img {
+                    img {
+                        width: 100%;
+                    }
+                }
+                &__title {
+                    @include font-montserrat;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 22px;
+                    color: #000;
+                    margin-top: 30px;
+                    span {
+                        @include font-montserrat;
+                        color: #4985ff;
+                    }
+                }
+                &__description {
+                    @include font-montserrat;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: #999;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1139px) {
+.section-services {
+&__upper {
+    &__info {
+        display: block;
+        text-align: center;
+        padding-top: 50px;
+    }
+}
+    &__lower {
+        &__item {
+            margin-bottom: 30px;
+            transform: translateY(-50%);
+            text-align: center;
+            &__img {
+                img {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}
+}
+@media (max-width: 545px) {
+    .section-services {
+        &__upper {
+            &__info {
+                &__title {
+                    font-size: 20px;
+                }
+            }
+        }
+            &__lower {
+                &__item {
+                    transform: translateY(-40%);
+                    }
+            }
+    }
+}
+
+
+// == / Services ============================================
