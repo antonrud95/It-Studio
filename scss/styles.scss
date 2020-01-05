@@ -369,7 +369,6 @@ $color-white: #fff;
         }
     }
     &__lower {
-        height: 485px;
         &__item {
             &__title {
                 @include font-montserrat;
@@ -463,6 +462,7 @@ $color-white: #fff;
             &__img {
                 img {
                     max-width: 80%;
+                    height: 100%;
                 }
             }
         }
@@ -485,6 +485,56 @@ $color-white: #fff;
             }
     }
 }
-
-
 // == / Services ============================================
+
+// == Projects ==============================================
+.section-projects {
+    background-color: #f6f6f8;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+.section-projects-content {
+    &__info {
+        text-align: center;
+        &__title {
+            @include font-montserrat;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 53px;
+            color: #000;
+            margin-bottom: 45px;
+        }
+        &__text {
+            @include font-montserrat;
+            font-size: 16px;
+            line-height: 25px;
+            color: #999;
+            margin-bottom: 45px;
+        }
+    }
+    &__examples {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    &__form {
+        text-align: center;
+    }
+}
+@media (max-width: 1139px) {
+    .section-projects {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .section-projects-content {
+        &__examples {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            &__item {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
+// == / Projects ============================================
